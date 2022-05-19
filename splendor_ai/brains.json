@@ -1,0 +1,11 @@
+{
+    "model": {
+        "h5_path": "/root/home/splendor/splendor-ai/splendor_ai/brains/model",
+        "num_episodes": 100,
+        "episodes_done": 99,
+        "y": 0.95,
+        "eps": 0.05304782235790118,
+        "decay_factor": 0.98,
+        "renew_dumb_ai": 400
+    }
+}
