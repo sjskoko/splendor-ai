@@ -85,7 +85,9 @@ class PrintBoard(object):
 		print('Round: ' + str(game_round))
 		
 		print('Nobels'.center(47, '='))
-		for i in state['nobles'].to_string(index=False).splitlines()[1:]: print(' '*17 + PrintBoard.color_nobel(i))
+		for i in state['nobles'].to_string(index=False).splitlines()[1:]: 
+			print(' '*17, end='')
+			print(PrintBoard.color_nobel(i))
 		print()
 
 		#print(str(state['tier3'][columns_to_show]).splitlines()[0])
@@ -105,7 +107,8 @@ class PrintBoard(object):
 				'\tT1 hidden cards: ' + str(state['hidden_t3']))
 		print()
 
-		print('Boards tokens: ' + PrintBoard.color_tokens(state['tokens']))
+		print('Boards tokens: ', end='')
+		print(PrintBoard.color_tokens(state['tokens']))
 		print()
 		
 		PrintBoard.print_players(state['players'], player_index)

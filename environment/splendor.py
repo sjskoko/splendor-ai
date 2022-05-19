@@ -230,9 +230,9 @@ class Splendor:
 		shown_tier2 = self.tier2[-min(4, len(self.tier2)):].reset_index(drop=True)
 		shown_tier3 = self.tier3[-min(4, len(self.tier3)):].reset_index(drop=True)
 
-		str_tier1 = [self.card_to_colors(shown_tier1.ix[i]) for i in range(len(shown_tier1))]
-		str_tier2 = [self.card_to_colors(shown_tier2.ix[i]) for i in range(len(shown_tier2))]
-		str_tier3 = [self.card_to_colors(shown_tier3.ix[i]) for i in range(len(shown_tier3))]
+		str_tier1 = [self.card_to_colors(shown_tier1.iloc[i]) for i in range(len(shown_tier1))]
+		str_tier2 = [self.card_to_colors(shown_tier2.iloc[i]) for i in range(len(shown_tier2))]
+		str_tier3 = [self.card_to_colors(shown_tier3.iloc[i]) for i in range(len(shown_tier3))]
 
 		return str_tier1 + str_tier2 + str_tier3
 

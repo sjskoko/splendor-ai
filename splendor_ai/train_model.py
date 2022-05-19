@@ -13,7 +13,7 @@ import itertools as it
 import matplotlib.pyplot as plt
 
 from keras.models import Sequential
-from keras.engine import InputLayer
+from keras.layers import InputLayer
 from keras.layers import Dense
 from keras.models import model_from_json
 from keras.layers import LeakyReLU
@@ -647,7 +647,9 @@ if __name__ == '__main__':
 				except:
 					PrintBoard.print_state(s, game_round, 0)
 					step(a, s, env, True)
-					exit('exiting')
+					# exit('exiting')
+					print('exiting')
+					break
 
 				if not new_s['return_tokens']:
 					break
@@ -663,7 +665,9 @@ if __name__ == '__main__':
 					except:
 						PrintBoard.print_state(new_s, game_round, idx)
 						step(dumb_a, new_s, env, True)
-						exit('exiting')
+						# exit('exiting')
+						print('exiting')
+						break
 
 					if not new_s['return_tokens']:
 						break
