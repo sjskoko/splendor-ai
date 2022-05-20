@@ -74,7 +74,7 @@ input_nodes = sum([
 input_nodes = 1312
 
 output_nodes = 88
-output_nodes = 13
+# output_nodes = 13
 
 '''
 def print_players(players):
